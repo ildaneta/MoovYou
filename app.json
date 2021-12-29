@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "favorites-movies",
+    "slug": "favorites-movies",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "favorites-movies"
+}
