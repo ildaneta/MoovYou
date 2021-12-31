@@ -1,1 +1,1 @@
-# favorites-movies
+# MoovYou - Movies For You
