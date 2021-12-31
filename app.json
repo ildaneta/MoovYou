@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "favorites-movies",
-    "slug": "favorites-movies",
+    "name": "MoovYou",
+    "slug": "MoovYou",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "favorites-movies"
+  "name": "MoovYou"
 }
