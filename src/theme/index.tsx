@@ -10,7 +10,8 @@ export default {
     XXS10: 10,
     XS12: 12,
     Medium14: 14,
-    Large: 20,
+    Intermediate16: 16,
+    Large20: 20,
     Hudge22: 22,
   },
 
