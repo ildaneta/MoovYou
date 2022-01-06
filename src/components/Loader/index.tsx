@@ -1,14 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ActivityIndicator, StyleProp, ViewStyle } from 'react-native';
 
-import { styles } from './styles';
+interface ILoaderProps {
+  size: 'small' | 'large';
+  color: string;
+  styles: StyleProp<ViewStyle>;
+}
 
-const Loader = (): JSX.Element => {
-  return (
-    <View>
-      <Text></Text>
-    </View>
-  );
+const Loader = ({ size, color, styles }: ILoaderProps): JSX.Element => {
+  return <ActivityIndicator size={size} color={color} style={styles} />;
 };
 
 export default Loader;
