@@ -1,13 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { TouchableOpacityProps, TouchableOpacity } from 'react-native';
 
-import { styles } from './styles';
+import HeartSVG from '../../images/heart-icon.svg';
+import HeartFilledSVG from '../../images/heart-filled-icon.svg';
 
-const Like = (): JSX.Element => {
+interface ILikeProps extends TouchableOpacityProps {
+  isLiked: boolean;
+}
+
+const Like = ({ isLiked }: ILikeProps): JSX.Element => {
   return (
-    <View>
-      <Text></Text>
-    </View>
+    <TouchableOpacity activeOpacity={0.8}>
+      {isLiked ? <HeartFilledSVG /> : <HeartSVG />}
+    </TouchableOpacity>
   );
 };
 
