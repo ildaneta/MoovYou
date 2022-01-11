@@ -3,7 +3,7 @@ import { Text as TextComponent, StyleSheet } from 'react-native';
 import { AlignTypes } from '../../utils/enum';
 
 interface ITextComponentProps {
-  textAlign: AlignTypes;
+  textAlign?: AlignTypes;
   label: string;
   color: string;
   fontSize: number;
