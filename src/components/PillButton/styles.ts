@@ -10,6 +10,6 @@ export const styles = StyleSheet.create({
     borderWidth: theme.dimensions.Thin05,
     borderRadius: theme.dimensions.Medium16,
     justifyContent: AlignTypes.center,
-    alignItems: 'center'
+    alignItems: AlignTypes.center
   },
 })
