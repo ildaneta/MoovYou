@@ -16,7 +16,7 @@ export default {
   },
 
   dimensions: {
-    Thin: 0.5,
+    Thin05: 0.5,
     Quarck4: 4,
     Small6: 6,
     XXS12: 12,
