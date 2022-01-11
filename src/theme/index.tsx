@@ -30,7 +30,7 @@ export default {
   colors: {
     neutral_black: '#242424',
     neutral_dark_gray: '#646464',
-    neutral_light_gray: '#929292',
+    neutral_light_gray: '#A4A4A4',
     neutral_gray: '#d1d1d1',
     neutral_middle_white: '#f2f2f2',
     neutral_white: '#f9f9f9',
