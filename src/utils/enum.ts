@@ -1,7 +1,8 @@
 enum AlignTypes {
   center = 'center',
   right = 'right',
-  left = 'left'
+  left = 'left',
+  row = 'row'
 }
 
 export { AlignTypes }
