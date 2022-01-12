@@ -5,8 +5,8 @@ import {
   TouchableOpacityProps,
   TouchableOpacity,
 } from 'react-native';
+import { MoviesDTO } from '../../dtos/MoviesDTO';
 
-import SpidermanImg from '../../images/spiderman.jpeg';
 import theme from '../../theme';
 import Like from '../Like';
 import Rates from '../Rates';
@@ -16,14 +16,23 @@ import { styles } from './styles';
 
 interface IMovieRateProps extends TouchableOpacityProps {
   isLiked: boolean;
+  data: MoviesDTO;
+  key: any;
 }
 
-const MovieRate = ({ isLiked, ...rest }: IMovieRateProps): JSX.Element => {
+const MovieRate = ({
+  isLiked,
+  data,
+  key,
+  ...rest
+}: IMovieRateProps): JSX.Element => {
   return (
-    <TouchableOpacity {...rest} activeOpacity={0.9}>
+    <TouchableOpacity {...rest} activeOpacity={0.9} key={key}>
       <View style={styles.containerImage}>
         <Image
-          source={require('../../images/homem-aranha.png')}
+          source={{
+            uri: `https://image.tmdb.org/t/p/w500/${data.poster_path}`,
+          }}
           resizeMode="cover"
           style={styles.image}
         />
@@ -34,14 +43,14 @@ const MovieRate = ({ isLiked, ...rest }: IMovieRateProps): JSX.Element => {
 
       <View style={styles.containerText}>
         <Text
-          label="Spiderman: No Way Home"
+          label={data.title}
           fontFamily={theme.fonts.Bold}
           color={theme.colors.neutral_gray}
           fontSize={theme.fontsSize.Medium14}
         />
       </View>
 
-      <Rates vote={'8.5'} />
+      <Rates vote={data.vote_average} />
     </TouchableOpacity>
   );
 };
