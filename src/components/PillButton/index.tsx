@@ -16,9 +16,8 @@ const PillButton = ({ label, ...rest }: IPillButtonProperties): JSX.Element => {
       <Text
         label={label}
         color={theme.colors.neutral_gray}
-        fontFamily={theme.fonts.Light}
+        fontFamily={theme.fonts.Medium}
         fontSize={theme.fontsSize.Medium14}
-        textAlign={AlignTypes.center}
       />
     </TouchableOpacity>
   );
