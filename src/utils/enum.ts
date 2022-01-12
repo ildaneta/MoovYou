@@ -2,7 +2,9 @@ enum AlignTypes {
   center = 'center',
   right = 'right',
   left = 'left',
-  row = 'row'
+  row = 'row',
+  absolute = 'absolute',
+  relative = 'relative'
 }
 
 export { AlignTypes }
