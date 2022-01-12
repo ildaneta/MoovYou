@@ -8,7 +8,7 @@ import StarSVG from '../../images/star-icon.svg';
 import { styles } from './styles';
 
 interface IRatesProps {
-  vote: string;
+  vote: number;
 }
 
 const Rates = ({ vote }: IRatesProps): JSX.Element => {
