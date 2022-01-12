@@ -19,12 +19,16 @@ export default {
     Thin05: 0.5,
     Quarck4: 4,
     Small6: 6,
+    XXXS10: 10,
     XXS12: 12,
     XS14: 14,
     Medium16: 16,
     Large30: 30,
     Hudge45: 45,
     Big60: 60,
+    width133: 133,
+    Big179: 179,
+    height198: 198,
   },
 
   colors: {
