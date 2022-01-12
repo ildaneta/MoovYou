@@ -17,6 +17,7 @@ export default {
 
   dimensions: {
     Thin05: 0.5,
+    Thin2: 2,
     Quarck4: 4,
     Small6: 6,
     XXXS10: 10,
@@ -27,9 +28,15 @@ export default {
     Large30: 30,
     Hudge45: 45,
     Big60: 60,
+    Big90: 90,
+    width99p: '99%',
+    width130: 130,
     width133: 133,
+    Big140: 140,
     Big179: 179,
+    height160: 160,
     height198: 198,
+    height180: 180,
   },
 
   colors: {

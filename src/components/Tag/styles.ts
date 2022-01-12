@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: theme.dimensions.Small6,
     borderColor: theme.colors.neutral_gray,
     borderWidth: theme.dimensions.Thin05,
-    marginHorizontal: theme.dimensions.Large20
+    marginHorizontal: theme.dimensions.Thin2,
+    marginBottom: theme.dimensions.Small6,
   },
 })
