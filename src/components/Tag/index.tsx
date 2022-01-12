@@ -30,7 +30,7 @@ const Tag = ({ tagType, title }: ITagProps): JSX.Element => {
         label={title}
         color={theme.colors.neutral_gray}
         fontFamily={theme.fonts.Light}
-        fontSize={theme.fontsSize.XS12}
+        fontSize={theme.fontsSize.XXS10}
         isUpperCase
       />
     </View>
