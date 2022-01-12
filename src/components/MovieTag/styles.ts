@@ -1,4 +1,4 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 import theme from '../../theme';
 import { AlignTypes } from '../../utils/enum';
 
@@ -13,13 +13,13 @@ export const styles = StyleSheet.create({
   containerLike: {
     position: AlignTypes.absolute,
     left: theme.dimensions.Quarck4,
-    top: 180
+    top: theme.dimensions.Big179
   },
 
   image: {
     position: AlignTypes.relative,
-    width: 130,
-    height: 200,
+    width: theme.dimensions.width130,
+    height: theme.dimensions.height198,
     borderRadius: theme.dimensions.XXXS10,
     marginRight: theme.dimensions.XXS12
   },
@@ -31,9 +31,9 @@ export const styles = StyleSheet.create({
   },
 
   containerTags: {
-    flexDirection: 'row',
+    flexDirection: AlignTypes.row,
     flexWrap: 'wrap',
-    width: '99%',
-    paddingTop: 90,
+    width: theme.dimensions.width99p,
+    paddingTop: theme.dimensions.Big90,
   }
 })
