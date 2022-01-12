@@ -8,9 +8,9 @@ interface ILikeProps extends TouchableOpacityProps {
   isLiked: boolean;
 }
 
-const Like = ({ isLiked }: ILikeProps): JSX.Element => {
+const Like = ({ isLiked, ...rest }: ILikeProps): JSX.Element => {
   return (
-    <TouchableOpacity activeOpacity={0.8}>
+    <TouchableOpacity activeOpacity={0.8} {...rest}>
       {isLiked ? <HeartFilledSVG /> : <HeartSVG />}
     </TouchableOpacity>
   );
