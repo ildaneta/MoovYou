@@ -3,12 +3,12 @@ import { View, Text } from 'react-native';
 
 import { styles } from './styles';
 
-const Home = (): JSX.Element => {
+const Search = (): JSX.Element => {
   return (
-    <View style={styles.container}>
-      <Text></Text>
+    <View>
+      <Text>Search page</Text>
     </View>
   );
 };
 
-export default Home;
+export default Search;

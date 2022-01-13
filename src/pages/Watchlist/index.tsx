@@ -3,12 +3,12 @@ import { View, Text } from 'react-native';
 
 import { styles } from './styles';
 
-const Home = (): JSX.Element => {
+const Watchlist = (): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <View>
       <Text></Text>
     </View>
   );
 };
 
-export default Home;
+export default Watchlist;
