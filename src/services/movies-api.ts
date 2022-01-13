@@ -19,6 +19,9 @@ const MoviesAPI = {
     return (await api).get(`movie/${movie_id}/credits?api_key=${API_KEY}&language=en-US`)
   },
 
+  getMoviesTopRated: async (page_number: number) => {
+    return (await api).get(`movie/top_rated?api_key=${API_KEY}&language=en-US&page=${page_number}`)
+  }
 }
 
 export default MoviesAPI;
