@@ -5,7 +5,7 @@ import { styles } from './styles';
 
 const Home = (): JSX.Element => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text></Text>
     </View>
   );
