@@ -3,6 +3,10 @@ import theme from '../../theme';
 import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+
  
   containerImage: {
     borderRadius: theme.dimensions.XXXS10,
@@ -11,7 +15,7 @@ export const styles = StyleSheet.create({
   containerLike: {
     position: AlignTypes.absolute,
     left: theme.dimensions.Quarck4,
-    top: theme.dimensions.Big179
+    top: theme.dimensions.Big170
   },
 
   image: {

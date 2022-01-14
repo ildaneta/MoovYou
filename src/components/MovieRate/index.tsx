@@ -17,17 +17,15 @@ import { styles } from './styles';
 interface IMovieRateProps extends TouchableOpacityProps {
   isLiked: boolean;
   data: MoviesDTO;
-  key: any;
 }
 
 const MovieRate = ({
   isLiked,
   data,
-  key,
   ...rest
 }: IMovieRateProps): JSX.Element => {
   return (
-    <TouchableOpacity {...rest} activeOpacity={0.9} key={key}>
+    <TouchableOpacity {...rest} activeOpacity={0.9} style={styles.container}>
       <View style={styles.containerImage}>
         <Image
           source={{

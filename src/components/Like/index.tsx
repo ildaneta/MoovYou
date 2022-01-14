@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacityProps, TouchableOpacity } from 'react-native';
 
-import HeartSVG from '../../images/heart-icon.svg';
+import HeartSVG from '../../images/like-icon.svg';
 import HeartFilledSVG from '../../images/heart-filled-icon.svg';
 
 interface ILikeProps extends TouchableOpacityProps {

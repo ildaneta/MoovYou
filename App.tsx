@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, SafeAreaView } from 'react-native';
 import {
   Roboto_300Light,
   Roboto_500Medium,
@@ -7,6 +7,8 @@ import {
 } from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
+import Routes from './src/routes';
+import theme from './src/theme';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,7 +23,15 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <SafeAreaView
+        style={{ flex: 1, backgroundColor: theme.colors.neutral_black }}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor={theme.colors.neutral_black}
+        />
+
+        <Routes />
+      </SafeAreaView>
     </>
   );
 }

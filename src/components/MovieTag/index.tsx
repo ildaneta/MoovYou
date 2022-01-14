@@ -1,5 +1,10 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import {
+  View,
+  Image,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from 'react-native';
 import { MoviesDTO } from '../../dtos/MoviesDTO';
 import theme from '../../theme';
 import { getNameGenres } from '../../utils/getNameGenres';
@@ -11,14 +16,14 @@ import Text from '../Text';
 
 import { styles } from './styles';
 
-interface IMovieTagProps {
+interface IMovieTagProps extends TouchableOpacityProps {
   data: MoviesDTO;
   isLiked: boolean;
 }
 
-const MovieTag = ({ data, isLiked }: IMovieTagProps): JSX.Element => {
+const MovieTag = ({ data, isLiked, ...rest }: IMovieTagProps): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} {...rest} activeOpacity={0.9}>
       <Image
         source={{
           uri: `https://image.tmdb.org/t/p/w500/${data.poster_path}`,
@@ -30,17 +35,19 @@ const MovieTag = ({ data, isLiked }: IMovieTagProps): JSX.Element => {
         <Like isLiked={isLiked} />
       </View>
 
-      <View>
+      <View style={styles.containerTitleTagRate}>
         <Text
           label={data.title}
           color={theme.colors.neutral_gray}
           fontFamily={theme.fonts.Bold}
           fontSize={theme.fontsSize.Medium14}
+          style={styles.title}
         />
 
         <View style={styles.dividerTextRates} />
 
         <Rates vote={data.vote_average} />
+
         <View style={styles.containerTags}>
           {data.genre_ids.map(genreId => (
             <Tag
@@ -51,7 +58,7 @@ const MovieTag = ({ data, isLiked }: IMovieTagProps): JSX.Element => {
           ))}
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
