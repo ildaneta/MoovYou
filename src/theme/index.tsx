@@ -31,12 +31,15 @@ export default {
     Big80: 80,
     Big140: 140,
     Big170: 170,
+    width70p: '70%',
+    width80p: '80%',
     width99p: '99%',
     width130: 130,
     width133: 133,
     height160: 160,
-    height198: 198,
     height180: 180,
+    height198: 198,
+    height300: 300,
   },
 
   colors: {
