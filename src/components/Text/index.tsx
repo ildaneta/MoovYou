@@ -1,8 +1,7 @@
 import React from 'react';
-import { Text as TextComponent, StyleSheet } from 'react-native';
-import { AlignTypes } from '../../utils/enum';
+import { Text as TextComponent, StyleSheet, TextProps } from 'react-native';
 
-export interface ITextProps {
+export interface ITextProps extends TextProps {
   label: string;
   color: string;
   fontSize: number;
@@ -16,7 +15,10 @@ const Text = ({
   fontSize,
   fontFamily,
   isUpperCase,
+  ...rest
 }: ITextProps): JSX.Element => {
+  const { style } = { ...rest };
+
   const stylesProps = StyleSheet.create({
     text: {
       color,
@@ -26,7 +28,7 @@ const Text = ({
   });
 
   return (
-    <TextComponent style={stylesProps.text}>
+    <TextComponent style={[stylesProps.text, style]}>
       {isUpperCase ? label.toUpperCase() : label}
     </TextComponent>
   );
