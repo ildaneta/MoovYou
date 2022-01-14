@@ -28,7 +28,7 @@ export default {
     Large30: 30,
     Hudge45: 45,
     Big60: 60,
-    Big90: 90,
+    Big80: 80,
     Big140: 140,
     Big170: 170,
     width99p: '99%',
