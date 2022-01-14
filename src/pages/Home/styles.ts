@@ -1,8 +1,30 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#242424',
-    flex: 1
+    backgroundColor: theme.colors.neutral_black,
+    paddingHorizontal: theme.dimensions.Medium16
   },
+
+  divider: {
+    paddingBottom: theme.dimensions.Large20
+  },
+
+  footerSpaceFlatlist: { 
+    marginBottom: theme.dimensions.Large20
+  },
+
+  title: {
+    paddingBottom: theme.dimensions.Large20,
+    paddingTop: theme.dimensions.Large30
+  },
+
+  separatorHorizontal: {
+    paddingHorizontal: theme.dimensions.Small6
+  },
+
+  containerFlatlistHorizontal: {
+    height: theme.dimensions.height300
+  }
 })
