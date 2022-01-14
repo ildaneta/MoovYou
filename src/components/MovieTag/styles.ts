@@ -1,19 +1,27 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import theme from '../../theme';
 import { AlignTypes } from '../../utils/enum';
+
+const windowWidth = Dimensions.get('window').width;
 
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: AlignTypes.row,
-    
   },
 
   containerLike: {
     position: AlignTypes.absolute,
     left: theme.dimensions.Quarck4,
-    top: theme.dimensions.Big179
+    top: theme.dimensions.Big170
+  },
+
+  containerTitleTagRate: {
+    width: theme.dimensions.width80p
+  },
+
+  title: {
+    width: theme.dimensions.width70p
   },
 
   image: {
@@ -23,8 +31,6 @@ export const styles = StyleSheet.create({
     borderRadius: theme.dimensions.XXXS10,
     marginRight: theme.dimensions.XXS12
   },
-
-  
   
   dividerTextRates: {
     marginBottom: theme.dimensions.XXXS10
@@ -32,8 +38,8 @@ export const styles = StyleSheet.create({
 
   containerTags: {
     flexDirection: AlignTypes.row,
-    flexWrap: 'wrap',
-    width: theme.dimensions.width99p,
-    paddingTop: theme.dimensions.Big90,
+    width: windowWidth > 400 ? theme.dimensions.width80p : theme.dimensions.width70p,
+    paddingTop: theme.dimensions.Big80,
+    flexWrap: 'wrap'
   }
 })
