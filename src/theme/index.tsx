@@ -1,6 +1,7 @@
 export default {
   fonts: {
     Light: 'Roboto_300Light',
+    Regular: 'Roboto_400Regular',
     Medium: 'Roboto_500Medium',
     Bold: 'Roboto_700Bold',
   },
@@ -20,6 +21,7 @@ export default {
     Thin2: 2,
     Quarck4: 4,
     Small6: 6,
+    Small8: 8,
     XXXS10: 10,
     XXS12: 12,
     XS14: 14,
@@ -28,6 +30,8 @@ export default {
     Large30: 30,
     Hudge45: 45,
     Big60: 60,
+    Big76: 76,
+    Big78: 78,
     Big80: 80,
     Big140: 140,
     Big170: 170,
