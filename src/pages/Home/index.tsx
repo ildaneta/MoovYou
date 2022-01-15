@@ -75,6 +75,16 @@ const Home = ({ navigation }: Props): JSX.Element => {
     });
   };
 
+  const selectedMovieNowPlaying = (id: number) => {
+    const movieIdSelected = moviesListNowPlaying.results.find(
+      movie => movie.id === id,
+    );
+
+    navigation.navigate(RoutesName.MOVIE_DESCRIPTION, {
+      movieId: movieIdSelected?.id!,
+    });
+  };
+
   useEffect(() => {
     LoadMoviesNowPlaying();
     LoadMoviesTopRated();
@@ -106,7 +116,11 @@ const Home = ({ navigation }: Props): JSX.Element => {
               keyExtractor={item => String(item.id)}
               showsVerticalScrollIndicator={false}
               renderItem={({ item }) => (
-                <MovieRate data={item} isLiked={false} />
+                <MovieRate
+                  data={item}
+                  isLiked={false}
+                  onPress={() => selectedMovieNowPlaying(item.id)}
+                />
               )}
               ItemSeparatorComponent={() => (
                 <View style={styles.separatorHorizontal} />
