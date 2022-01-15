@@ -2,6 +2,7 @@ import React from 'react';
 import { StatusBar, SafeAreaView } from 'react-native';
 import {
   Roboto_300Light,
+  Roboto_400Regular,
   Roboto_500Medium,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
@@ -13,6 +14,7 @@ import theme from './src/theme';
 export default function App() {
   const [fontsLoaded] = useFonts({
     Roboto_300Light,
+    Roboto_400Regular,
     Roboto_500Medium,
     Roboto_700Bold,
   });
