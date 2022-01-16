@@ -4,7 +4,9 @@ enum AlignTypes {
   left = 'left',
   row = 'row',
   absolute = 'absolute',
-  relative = 'relative'
+  relative = 'relative',
+  flex_start = 'flex-start',
+  space_between = 'space-between'
 }
 
 export { AlignTypes }
