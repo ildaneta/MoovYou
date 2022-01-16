@@ -49,6 +49,7 @@ const Home = ({ navigation }: Props): JSX.Element => {
       setIsLoading(false);
     } catch (error) {
       console.log(error);
+      // TODO create a error file
       throw new Error('Ops! We had an error to get the movies list!');
     }
   };
