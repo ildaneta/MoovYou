@@ -35,6 +35,7 @@ export default {
     Big76: 76,
     Big78: 78,
     Big80: 80,
+    Big100: 100,
     Big140: 140,
     Big170: 170,
     width50p: '50%',
