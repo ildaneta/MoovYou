@@ -2,7 +2,6 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RoutesName } from '../utils/routesName';
 
-import Home from '../pages/Home';
 import MovieDescription from '../pages/MovieDescription';
 import TabRoutes from './tab.routes';
 import Walkthrough from '../pages/Walkthrough';
