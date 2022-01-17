@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import Header from '../../components/Header';
@@ -15,6 +15,7 @@ import { IStackRoutes } from '../../routes/stack.routes';
 import { styles } from './styles';
 import Loader from '../../components/Loader';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<IStackRoutes, 'Home'>;
 
@@ -88,21 +89,27 @@ const Home = ({ navigation }: Props): JSX.Element => {
     });
   };
 
+  const loadFirstTime = async (): Promise<void> => {
+    const storage = await AsyncStorage.getItem('@moovyou:isFirstTime');
+
+    const firstTime = storage;
+
+    setIsFirstTime(firstTime);
+    if (firstTime !== 'no') return navigation.navigate(RoutesName.WALKTHROUGH);
+  };
+
   useEffect(() => {
-    async function loadFirstTime(): Promise<void> {
-      const storage = await AsyncStorage.getItem('@moovyou:isFirstTime');
-
-      const firstTime = storage;
-
-      setIsFirstTime(firstTime);
-      if (firstTime !== 'no')
-        return navigation.navigate(RoutesName.WALKTHROUGH);
-    }
-
     loadFirstTime();
     loadMoviesNowPlaying();
     loadMoviesTopRated();
   }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadMoviesNowPlaying();
+      loadMoviesTopRated();
+    }, []),
+  );
 
   return (
     <>
