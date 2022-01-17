@@ -1,8 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { AlignTypes } from '../utils/enum';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RoutesName } from '../utils/routesName';
-import Home from '../pages/Home';
 
 import MovieIconSVG from '../images/movie-icon.svg';
 import MovieIconDisabledSVG from '../images/movie-icon-disabled.svg';
@@ -11,6 +11,7 @@ import HeartIconDisabledSVG from '../images/heart-icon-disabled.svg';
 import SearchIconSVG from '../images/search-icon.svg';
 import SearchIconDisabledSVG from '../images/search-icon-disabled.svg';
 
+import Home from '../pages/Home';
 import Text from '../components/Text';
 import theme from '../theme';
 import Watchlist from '../pages/Watchlist';
@@ -111,18 +112,16 @@ const TabRoutes = (): JSX.Element => {
   );
 };
 
-import { StyleSheet } from 'react-native';
-
 const styles = StyleSheet.create({
   containerTabBar: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 2,
-    flexDirection: 'column',
+    alignItems: AlignTypes.center,
+    justifyContent: AlignTypes.center,
+    marginTop: theme.dimensions.Thin2,
+    flexDirection: AlignTypes.column,
   },
 
   divider: {
-    marginBottom: 4,
+    marginBottom: theme.dimensions.Quarck4,
   },
 });
 
