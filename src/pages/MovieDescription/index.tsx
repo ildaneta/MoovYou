@@ -110,7 +110,7 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
               />
 
               <View style={styles.like}>
-                <Like isLiked />
+                <Like isLiked={false} />
               </View>
             </View>
 

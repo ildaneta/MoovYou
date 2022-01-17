@@ -23,7 +23,7 @@ type Props = {
   navigation: HomeScreenNavigationProp;
 };
 
-export interface IHomeMoviesProps {
+export interface IMoviesProps {
   dates: {
     maximum: string;
     minimum: string;
@@ -36,9 +36,9 @@ export interface IHomeMoviesProps {
 
 const Home = ({ navigation }: Props): JSX.Element => {
   const [moviesListNowPlaying, setMoviesListNowPlaying] =
-    useState<IHomeMoviesProps>({} as IHomeMoviesProps);
-  const [moviesTopRated, setMoviesTopRated] = useState<IHomeMoviesProps>(
-    {} as IHomeMoviesProps,
+    useState<IMoviesProps>({} as IMoviesProps);
+  const [moviesTopRated, setMoviesTopRated] = useState<IMoviesProps>(
+    {} as IMoviesProps,
   );
   const [isLoading, setIsLoading] = useState(false);
   const [__, setIsFirstTime] = useState<string | null>();

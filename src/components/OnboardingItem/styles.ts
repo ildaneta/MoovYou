@@ -4,7 +4,7 @@ import theme from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: theme.dimensions.Thin1,
     justifyContent: AlignTypes.space_between,
     paddingTop: theme.dimensions.Large20
   },

@@ -5,7 +5,7 @@ import { AlignTypes } from '../../utils/enum';
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.neutral_black,
-    flex: 1,
+    flex: theme.dimensions.Thin1,
     paddingHorizontal: theme.dimensions.Medium16,
     justifyContent: AlignTypes.center
   },

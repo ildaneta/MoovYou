@@ -26,7 +26,10 @@ export default function App() {
   return (
     <>
       <SafeAreaView
-        style={{ flex: 1, backgroundColor: theme.colors.neutral_black }}>
+        style={{
+          flex: theme.dimensions.Thin1,
+          backgroundColor: theme.colors.neutral_black,
+        }}>
         <StatusBar
           barStyle="light-content"
           backgroundColor={theme.colors.neutral_black}

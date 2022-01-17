@@ -5,7 +5,6 @@ import { AlignTypes } from '../../utils/enum';
 export const styles = StyleSheet.create({
   container: {
     flexDirection: AlignTypes.row,
-    alignItems: AlignTypes.center,
   },
 
   divider: {

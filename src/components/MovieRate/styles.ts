@@ -4,7 +4,7 @@ import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: theme.dimensions.Thin1
   },
 
  
@@ -28,5 +28,9 @@ export const styles = StyleSheet.create({
   containerText: {
     width: theme.dimensions.width133,
     marginVertical: theme.dimensions.XXS12
+  },
+
+  title: {
+    paddingBottom: theme.dimensions.XXXS10
   }
 })

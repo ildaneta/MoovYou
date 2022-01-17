@@ -21,8 +21,14 @@ const MoviesAPI = {
 
   getMoviesTopRated: async (page_number: number) => {
     return (await api).get(`movie/top_rated?api_key=${API_KEY}&language=en-US&page=${page_number}`)
+  },
+
+  getMoviesSearch: async (page_number: number, query: string) => {
+    return (await api).get(`search/movie?api_key=${API_KEY}&language=en-US&page=${page_number}&include_adult=true&query=${query}`)
   }
 }
+
+
 
 export default MoviesAPI;
 
