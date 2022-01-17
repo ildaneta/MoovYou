@@ -7,6 +7,7 @@ export interface ITextProps extends TextProps {
   fontSize: number;
   fontFamily: string;
   isUpperCase?: boolean;
+  textAlign?: 'center' | 'right' | 'left';
 }
 
 const Text = ({
@@ -15,6 +16,7 @@ const Text = ({
   fontSize,
   fontFamily,
   isUpperCase,
+  textAlign,
   ...rest
 }: ITextProps): JSX.Element => {
   const { style } = { ...rest };
@@ -24,6 +26,7 @@ const Text = ({
       color,
       fontFamily,
       fontSize,
+      textAlign,
     },
   });
 

@@ -4,5 +4,6 @@ export enum RoutesName {
   WATCHLIST = 'Watchlist',
   SEARCH = 'Search',
   LOGIN = 'Login',
-  TAB_ROUTES = 'Tab_Routes'
+  TAB_ROUTES = 'Tab_Routes',
+  WALKTHROUGH = 'Walkthrough'
 }
