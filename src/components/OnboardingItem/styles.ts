@@ -5,7 +5,8 @@ import theme from '../../theme';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: AlignTypes.center,
+    justifyContent: AlignTypes.space_between,
+    paddingTop: theme.dimensions.Large20
   },
   
   containerImageDescription: {
@@ -14,7 +15,6 @@ export const styles = StyleSheet.create({
 
   containerBrand: {
     paddingLeft: theme.dimensions.Large30,
-    paddingBottom: theme.dimensions.Big100
   },
 
   image: {
