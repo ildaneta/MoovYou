@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: theme.dimensions.Thin1,
     flexDirection: AlignTypes.row,
     alignItems: AlignTypes.center,
     height: theme.dimensions.Big60,
