@@ -14,11 +14,12 @@ import { IStackRoutes } from '../../routes/stack.routes';
 
 import { styles } from './styles';
 import Loader from '../../components/Loader';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-type MainScreenNavigationProp = NativeStackNavigationProp<IStackRoutes, 'Home'>;
+type HomeScreenNavigationProp = NativeStackNavigationProp<IStackRoutes, 'Home'>;
 
 type Props = {
-  navigation: MainScreenNavigationProp;
+  navigation: HomeScreenNavigationProp;
 };
 
 export interface IHomeMoviesProps {
@@ -39,9 +40,10 @@ const Home = ({ navigation }: Props): JSX.Element => {
     {} as IHomeMoviesProps,
   );
   const [isLoading, setIsLoading] = useState(false);
+  const [__, setIsFirstTime] = useState<string | null>();
   const [page, _] = useState(1);
 
-  const LoadMoviesNowPlaying = async () => {
+  const loadMoviesNowPlaying = async () => {
     try {
       setIsLoading(true);
       const response = await MoviesAPI.getMoviesListNowPlaying(page);
@@ -54,7 +56,7 @@ const Home = ({ navigation }: Props): JSX.Element => {
     }
   };
 
-  const LoadMoviesTopRated = async () => {
+  const loadMoviesTopRated = async () => {
     try {
       setIsLoading(true);
       const response = await MoviesAPI.getMoviesTopRated(page);
@@ -87,8 +89,19 @@ const Home = ({ navigation }: Props): JSX.Element => {
   };
 
   useEffect(() => {
-    LoadMoviesNowPlaying();
-    LoadMoviesTopRated();
+    async function loadFirstTime(): Promise<void> {
+      const storage = await AsyncStorage.getItem('@moovyou:isFirstTime');
+
+      const firstTime = storage;
+
+      setIsFirstTime(firstTime);
+      if (firstTime !== 'no')
+        return navigation.navigate(RoutesName.WALKTHROUGH);
+    }
+
+    loadFirstTime();
+    loadMoviesNowPlaying();
+    loadMoviesTopRated();
   }, []);
 
   return (
