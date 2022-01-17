@@ -22,12 +22,12 @@ const StackRoutes = (): JSX.Element => {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name={RoutesName.TAB_ROUTES} component={TabRoutes} />
-      <Screen name={RoutesName.WALKTHROUGH} component={Walkthrough} />
       <Screen name={RoutesName.HOME} component={Home} />
       <Screen
         name={RoutesName.MOVIE_DESCRIPTION}
         component={MovieDescription}
       />
+      <Screen name={RoutesName.WALKTHROUGH} component={Walkthrough} />
     </Navigator>
   );
 };
