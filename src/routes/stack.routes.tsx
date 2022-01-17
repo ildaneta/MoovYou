@@ -14,6 +14,7 @@ export type IStackRoutes = {
   };
   Tab_Routes: undefined;
   Walkthrough: undefined;
+  Search: undefined;
 };
 
 const { Navigator, Screen } = createNativeStackNavigator<IStackRoutes>();
