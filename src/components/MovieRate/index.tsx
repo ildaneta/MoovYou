@@ -4,10 +4,12 @@ import {
   Image,
   TouchableOpacityProps,
   TouchableOpacity,
+  StyleSheet,
 } from 'react-native';
 import { MoviesDTO } from '../../dtos/MoviesDTO';
 
 import theme from '../../theme';
+import { AlignTypes } from '../../utils/enum';
 import Like from '../Like';
 import Rates from '../Rates';
 import Text from '../Text';
@@ -17,15 +19,27 @@ import { styles } from './styles';
 interface IMovieRateProps extends TouchableOpacityProps {
   isLiked: boolean;
   data: MoviesDTO;
+  isSearch?: boolean;
 }
 
 const MovieRate = ({
   isLiked,
   data,
+  isSearch,
   ...rest
 }: IMovieRateProps): JSX.Element => {
+  const stylesProps = StyleSheet.create({
+    container: {
+      height: theme.dimensions.Hudge320,
+      width: theme.dimensions.width50p,
+      alignItems: AlignTypes.center,
+    },
+  });
   return (
-    <TouchableOpacity {...rest} activeOpacity={0.9} style={styles.container}>
+    <TouchableOpacity
+      {...rest}
+      activeOpacity={0.9}
+      style={isSearch ? stylesProps.container : styles.container}>
       <View style={styles.containerImage}>
         <Image
           source={{
@@ -45,10 +59,11 @@ const MovieRate = ({
           fontFamily={theme.fonts.Bold}
           color={theme.colors.neutral_gray}
           fontSize={theme.fontsSize.Medium14}
+          style={styles.title}
         />
-      </View>
 
-      <Rates vote={data.vote_average} />
+        <Rates vote={data.vote_average} />
+      </View>
     </TouchableOpacity>
   );
 };
