@@ -61,7 +61,6 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
 
   const GetMoviesCast = async () => {
     try {
-      console.log('entrou aqui');
       const response = await MoviesAPI.getMovieCast(movieId);
       setMovieCastReduced(response.data);
     } catch (error) {
@@ -71,8 +70,6 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
   };
 
   const firstActors = movieCastReduced && movieCastReduced?.cast.slice(0, 4);
-
-  console.log(firstActors);
 
   useEffect(() => {
     LoadMovieDetails();
