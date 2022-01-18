@@ -6,7 +6,7 @@
 - [:camera: Final images](#camera-final-images)
 - [:computer: How to run the app](#computer-how-to-run-the-app)
 - [:wrench: Technologies utilized](#wrench-technologies-utilized)
-- [Next steps](#next-steps)
+- [:seedling: Next steps](#seedling-next-steps)
 - [:pencil: Dev](#pencil-dev)
 
 ## :pushpin: Motivation
@@ -51,7 +51,7 @@ expo start
 - React Navigation
 - Expo bare workflow
 - External fonts by Google
-## Next steps 
+## :seedling: Next steps 
 
 - Social login with Google and Apple
 - Finish the implementation of favorite movie
