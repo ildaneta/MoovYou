@@ -40,6 +40,8 @@ const MovieDetails = ({ data, ...rest }: IMovieDetailsProps): JSX.Element => {
     }
   };
 
+  const firstGenres = data.genres && data.genres.slice(0, 4);
+
   return (
     <View style={styles.movieDetails} {...rest}>
       {!!data.vote_average && (
@@ -56,7 +58,7 @@ const MovieDetails = ({ data, ...rest }: IMovieDetailsProps): JSX.Element => {
         </View>
       )}
 
-      {!!data.genres && (
+      {!!firstGenres && (
         <View style={[styles.containerRate, styles.containerGenreTag]}>
           <Text
             label="Genre"
@@ -67,10 +69,9 @@ const MovieDetails = ({ data, ...rest }: IMovieDetailsProps): JSX.Element => {
           />
 
           <View style={styles.containerGenre}>
-            {data.genres &&
-              data.genres!.map(tag => (
-                <Tag tagType="SquareTag" title={tag.name} key={tag.id} />
-              ))}
+            {firstGenres!.map(tag => (
+              <Tag tagType="SquareTag" title={tag.name} key={tag.id} />
+            ))}
           </View>
         </View>
       )}
