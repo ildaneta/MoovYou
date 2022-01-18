@@ -1,14 +1,13 @@
-# <h1 align="center">MoovYou - Movies For You</h1>
+<h1 align="center">MoovYou - Movies For You</h1>
 
 ## :octocat: Menu Contents
-
-- [<h1 align="center">MoovYou - Movies For You</h1>](#h1-aligncentermoovyou---movies-for-youh1)
-  - [:octocat: Menu Contents](#octocat-menu-contents)
-  - [:pushpin: Motivation](#pushpin-motivation)
-  - [:camera: Final images](#camera-final-images)
-  - [:computer: How to run the app](#computer-how-to-run-the-app)
-  - [:wrench: Technologies utilized](#wrench-technologies-utilized)
-  - [:pencil: Dev](#pencil-dev)
+- [:octocat: Menu Contents](#octocat-menu-contents)
+- [:pushpin: Motivation](#pushpin-motivation)
+- [:camera: Final images](#camera-final-images)
+- [:computer: How to run the app](#computer-how-to-run-the-app)
+- [:wrench: Technologies utilized](#wrench-technologies-utilized)
+- [Next steps](#next-steps)
+- [:pencil: Dev](#pencil-dev)
 
 ## :pushpin: Motivation
 
@@ -44,6 +43,7 @@ cd ..
 expo start
 ```
 
+
 ## :wrench: Technologies utilized
 
 - TypeScript
@@ -51,6 +51,12 @@ expo start
 - React Navigation
 - Expo bare workflow
 - External fonts by Google
+## Next steps 
+
+- Social login with Google and Apple
+- Finish the implementation of favorite movie
+- Switch language
+- Code push
 
 ## :pencil: Dev
 
