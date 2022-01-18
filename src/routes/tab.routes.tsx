@@ -23,12 +23,7 @@ const TabRoutes = (): JSX.Element => {
   return (
     <Navigator
       screenOptions={{
-        tabBarStyle: {
-          backgroundColor: '#242424',
-          borderTopColor: '#fff',
-          borderTopWidth: 1,
-          height: 60,
-        },
+        tabBarStyle: { ...styles.tabBar },
       }}>
       <Screen
         name={RoutesName.HOME}
@@ -51,6 +46,7 @@ const TabRoutes = (): JSX.Element => {
                     ? theme.colors.neutral_middle_white
                     : theme.colors.neutral_gray
                 }
+                textAlign={AlignTypes.center}
               />
             </View>
           ),
@@ -77,6 +73,7 @@ const TabRoutes = (): JSX.Element => {
                     ? theme.colors.neutral_middle_white
                     : theme.colors.neutral_gray
                 }
+                textAlign={AlignTypes.center}
               />
             </View>
           ),
@@ -103,6 +100,7 @@ const TabRoutes = (): JSX.Element => {
                     ? theme.colors.neutral_middle_white
                     : theme.colors.neutral_gray
                 }
+                textAlign={AlignTypes.center}
               />
             </View>
           ),
@@ -118,10 +116,18 @@ const styles = StyleSheet.create({
     justifyContent: AlignTypes.center,
     marginTop: theme.dimensions.Thin2,
     flexDirection: AlignTypes.column,
+    width: theme.dimensions.Big60,
   },
 
   divider: {
     marginBottom: theme.dimensions.Quarck4,
+  },
+
+  tabBar: {
+    backgroundColor: theme.colors.neutral_black,
+    borderTopColor: theme.colors.neutral_white,
+    borderTopWidth: theme.dimensions.Thin1,
+    height: theme.dimensions.Big60,
   },
 });
 

@@ -32,6 +32,7 @@ export default {
     Large20: 20,
     Large22: 22,
     Large30: 30,
+    Hudge40: 40,
     Hudge45: 45,
     Big60: 60,
     Big76: 76,

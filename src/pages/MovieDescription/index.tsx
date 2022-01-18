@@ -42,7 +42,6 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
   const [movieDetails, setMovieDetails] = useState<MovieDetailsDTO>(
     {} as MovieDetailsDTO,
   );
-  const [movieCast, setMovieCast] = useState<MovieCastDTO>({} as MovieCastDTO);
   const [movieCastReduced, setMovieCastReduced] = useState<movieCastType>();
 
   const { movieId } = route.params;

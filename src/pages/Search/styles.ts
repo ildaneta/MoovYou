@@ -23,17 +23,18 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: theme.dimensions.Small6,
     borderBottomLeftRadius: theme.dimensions.Small6,
     width: theme.dimensions.width90p,
-    color: theme.colors.neutral_white
+    color: theme.colors.neutral_white,
+    height: theme.dimensions.Hudge40
   },
 
   containerSearch: {
     flexDirection: AlignTypes.row,
-    alignItems: AlignTypes.center
   },
 
   search: {
     width: theme.dimensions.width10p,
     alignItems: AlignTypes.center,
+    justifyContent: AlignTypes.center,
     borderColor: theme.colors.neutral_white,
     borderTopWidth: theme.dimensions.Thin1,
     borderBottomWidth: theme.dimensions.Thin1,
@@ -41,6 +42,7 @@ export const styles = StyleSheet.create({
     paddingVertical: theme.dimensions.Small7,
     borderTopRightRadius: theme.dimensions.Small6,
     borderBottomRightRadius: theme.dimensions.Small6,
+    height: theme.dimensions.Hudge40
   },
 
   containerMovie: {

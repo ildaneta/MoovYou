@@ -4,7 +4,9 @@ import theme from '../../theme';
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.neutral_black,
-    paddingHorizontal: theme.dimensions.Medium16
+    paddingHorizontal: theme.dimensions.Medium16,
+    flex: theme.dimensions.Thin1,
+    paddingBottom: theme.dimensions.Large30
   },
 
   divider: {

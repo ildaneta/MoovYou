@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, SafeAreaView } from 'react-native';
+import { StatusBar, SafeAreaView, LogBox } from 'react-native';
 import {
   Roboto_300Light,
   Roboto_400Regular,
@@ -10,6 +10,8 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import Routes from './src/routes';
 import theme from './src/theme';
+
+LogBox.ignoreAllLogs();
 
 export default function App() {
   const [fontsLoaded] = useFonts({

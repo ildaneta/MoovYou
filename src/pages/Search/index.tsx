@@ -1,5 +1,11 @@
 import React, { useCallback, useState } from 'react';
-import { View, TextInput, TouchableOpacity } from 'react-native';
+import {
+  View,
+  TextInput,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 import theme from '../../theme';
 
 import SearchIconSVG from '../../images/search-icon-page.svg';
@@ -72,7 +78,9 @@ const Search = ({ navigation }: Props): JSX.Element => {
     }, []),
   );
   return (
-    <>
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <View style={styles.header}>
         <Header />
       </View>
@@ -120,7 +128,7 @@ const Search = ({ navigation }: Props): JSX.Element => {
           </View>
         )}
       </View>
-    </>
+    </KeyboardAvoidingView>
   );
 };
 
