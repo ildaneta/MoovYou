@@ -5,8 +5,21 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "splash": {
+      "image": "./resources/splash.png",
+      "backgroundColor": "#242424"
+    },
+    "icon": "./resources/adaptative-icon.png"
   },
   "name": "MoovYou",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "ios": {
+    "bundleIdentifier": "com.MoovYou",
+    "buildNumber": "1.0.0"
+  },
+  "android": {
+    "package": "com.MoovYou",
+    "versionCode": 1
+  }
 }
