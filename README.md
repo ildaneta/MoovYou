@@ -3,6 +3,7 @@
 ## :octocat: Menu Contents
 - [:octocat: Menu Contents](#octocat-menu-contents)
 - [:pushpin: Motivation](#pushpin-motivation)
+- [Figma design](#figma-design)
 - [:camera: Final images](#camera-final-images)
 - [:computer: How to run the app](#computer-how-to-run-the-app)
 - [:wrench: Technologies utilized](#wrench-technologies-utilized)
@@ -18,6 +19,9 @@ This app was built to allow us to see the movies now playing, the most rated and
 3. Favorites page (empty state )
 4. Search page
 
+## Figma design
+
+- [Figma file](https://www.figma.com/file/KzuHFEpJIFOkai4x65TGKA/MovYou---Movies-for-you?node-id=0%3A1)   
 ## :camera: Final images
 
 <img width="896" alt="Walkthrough" src="https://user-images.githubusercontent.com/21963291/149907601-a4d886f9-7e3c-40ca-b6c8-203388539cdb.png" />
