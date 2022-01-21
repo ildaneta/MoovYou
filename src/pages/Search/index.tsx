@@ -6,7 +6,6 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import theme from '../../theme';
 
 import SearchIconSVG from '../../images/search-icon-page.svg';
 
@@ -22,6 +21,7 @@ import { IMoviesProps } from '../Home';
 import Header from '../../components/Header';
 import { useFocusEffect } from '@react-navigation/native';
 import Loader from '../../components/Loader';
+import Input from '../../components/Input';
 
 type SearchScreenNavigationProp = NativeStackNavigationProp<
   IStackRoutes,
@@ -74,6 +74,7 @@ const Search = ({ navigation }: Props): JSX.Element => {
   useFocusEffect(
     useCallback(() => {
       setInputSearchText('');
+
       setMovieSearched({});
     }, []),
   );
@@ -87,12 +88,10 @@ const Search = ({ navigation }: Props): JSX.Element => {
 
       <View style={styles.container}>
         <View style={styles.containerSearch}>
-          <TextInput
+          <Input
             onChangeText={handleSearchMovie}
             onSubmitEditing={getMovieSearched}
             placeholder="Search your movie"
-            style={styles.input}
-            placeholderTextColor={theme.colors.neutral_light_gray}
             value={inputSearchText}
           />
 
