@@ -22,6 +22,7 @@ import { IMoviesProps } from '../Home';
 import Header from '../../components/Header';
 import { useFocusEffect } from '@react-navigation/native';
 import Loader from '../../components/Loader';
+import Input from '../../components/Input';
 
 type SearchScreenNavigationProp = NativeStackNavigationProp<
   IStackRoutes,
@@ -87,12 +88,10 @@ const Search = ({ navigation }: Props): JSX.Element => {
 
       <View style={styles.container}>
         <View style={styles.containerSearch}>
-          <TextInput
+          <Input
             onChangeText={handleSearchMovie}
             onSubmitEditing={getMovieSearched}
             placeholder="Search your movie"
-            style={styles.input}
-            placeholderTextColor={theme.colors.neutral_light_gray}
             value={inputSearchText}
           />
 
