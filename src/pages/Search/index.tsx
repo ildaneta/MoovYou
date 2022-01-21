@@ -6,7 +6,6 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import theme from '../../theme';
 
 import SearchIconSVG from '../../images/search-icon-page.svg';
 
@@ -75,6 +74,7 @@ const Search = ({ navigation }: Props): JSX.Element => {
   useFocusEffect(
     useCallback(() => {
       setInputSearchText('');
+
       setMovieSearched({});
     }, []),
   );
