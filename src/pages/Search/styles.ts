@@ -18,21 +18,12 @@ export const styles = StyleSheet.create({
     flexDirection: AlignTypes.row,
   },
 
-  search: {
-    width: theme.dimensions.width10p,
-    alignItems: AlignTypes.center,
-    justifyContent: AlignTypes.center,
-    borderColor: theme.colors.neutral_white,
-    borderTopWidth: theme.dimensions.Thin1,
-    borderBottomWidth: theme.dimensions.Thin1,
-    borderRightWidth: theme.dimensions.Thin1,
-    paddingVertical: theme.dimensions.Small7,
-    borderTopRightRadius: theme.dimensions.Small6,
-    borderBottomRightRadius: theme.dimensions.Small6,
-    height: theme.dimensions.Hudge40
+ 
+  searchError: {
+    borderColor: theme.colors.neutral_red
   },
 
   containerMovie: {
-    paddingTop: theme.dimensions.Large20,
+    paddingTop: theme.dimensions.Large20
   }
 })
