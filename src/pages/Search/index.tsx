@@ -22,6 +22,7 @@ import Header from '../../components/Header';
 import { useFocusEffect } from '@react-navigation/native';
 import Loader from '../../components/Loader';
 import Input from '../../components/Input';
+import theme from '../../theme';
 
 type SearchScreenNavigationProp = NativeStackNavigationProp<
   IStackRoutes,
@@ -39,25 +40,37 @@ const Search = ({ navigation }: Props): JSX.Element => {
     {} as IMoviesProps,
   );
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [errorText, setErrorText] = useState('');
 
   const handleSearchMovie = (text: string) => {
     if (!text) {
-      console.log('a busca nao pode estar vazia');
+      setIsError(true);
+      setErrorText('The search canot be empty');
     }
     setInputSearchText(text);
+    setIsError(false);
   };
 
   const getMovieSearched = async () => {
-    try {
-      setIsLoading(true);
-      const response = await MoviesAPI.getMoviesSearch(
-        page,
-        inputSearchText && inputSearchText,
-      );
-      setMovieSearched(response.data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
+    if (inputSearchText === '') {
+      setIsError(true);
+      setMovieSearched({});
+      setErrorText('The search canot be empty');
+      return;
+    } else {
+      setIsError(false);
+      try {
+        setIsLoading(true);
+        const response = await MoviesAPI.getMoviesSearch(
+          page,
+          inputSearchText && inputSearchText,
+        );
+        setMovieSearched(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -73,14 +86,15 @@ const Search = ({ navigation }: Props): JSX.Element => {
 
   useFocusEffect(
     useCallback(() => {
-      setInputSearchText('');
-
       setMovieSearched({});
+      setInputSearchText('');
+      setErrorText('');
+      setIsError(false);
     }, []),
   );
   return (
     <KeyboardAvoidingView
-      style={{ flex: 1 }}
+      style={{ flex: theme.dimensions.Thin1 }}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <View style={styles.header}>
         <Header />
@@ -93,17 +107,10 @@ const Search = ({ navigation }: Props): JSX.Element => {
             onSubmitEditing={getMovieSearched}
             placeholder="Search your movie"
             value={inputSearchText}
+            isError={isError}
+            labelError={errorText}
+            onPress={() => getMovieSearched()}
           />
-
-          <View style={styles.search}>
-            <TouchableOpacity
-              activeOpacity={0.7}
-              onPress={() => {
-                getMovieSearched();
-              }}>
-              <SearchIconSVG />
-            </TouchableOpacity>
-          </View>
         </View>
 
         {isLoading ? (
