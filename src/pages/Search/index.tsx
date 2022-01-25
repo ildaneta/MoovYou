@@ -56,7 +56,7 @@ const Search = ({ navigation }: Props): JSX.Element => {
     if (inputSearchText === '') {
       setIsError(true);
       setMovieSearched({});
-      setErrorText('The search canot be empty');
+      setErrorText('Search cannot be empty');
       return;
     } else {
       setIsError(false);
