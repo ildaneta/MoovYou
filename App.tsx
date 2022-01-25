@@ -10,6 +10,7 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import Routes from './src/routes';
 import theme from './src/theme';
+import { AuthProvider } from './src/context/AuthContext';
 
 LogBox.ignoreAllLogs();
 
@@ -37,7 +38,9 @@ export default function App() {
           backgroundColor={theme.colors.neutral_black}
         />
 
-        <Routes />
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
       </SafeAreaView>
     </>
   );
