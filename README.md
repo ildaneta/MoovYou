@@ -24,9 +24,9 @@ This app was built to allow us to see the movies now playing, the most rated and
 - [Figma file](https://www.figma.com/file/KzuHFEpJIFOkai4x65TGKA/MovYou---Movies-for-you?node-id=0%3A1)   
 ## :camera: Final images
 
-<img width="840" alt="Login" src="https://user-images.githubusercontent.com/21963291/150960563-391fccc6-946a-4921-85d6-9d5bfd1a7765.png">
-
 <img width="840" alt="Walkthrough" src="https://user-images.githubusercontent.com/21963291/149907722-83a6e8b5-2f5f-4fca-b147-cbc6ce8208c2.png" />
+
+<img width="840" alt="Login" src="https://user-images.githubusercontent.com/21963291/150960563-391fccc6-946a-4921-85d6-9d5bfd1a7765.png">
 
 <img width="840" alt="Home screen" src="https://user-images.githubusercontent.com/21963291/149907784-f3857429-8919-4a8a-bbda-5d6f1e115e17.png" />
 
