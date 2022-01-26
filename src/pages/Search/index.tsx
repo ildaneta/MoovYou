@@ -1,13 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import {
-  View,
-  TextInput,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  Platform,
-} from 'react-native';
-
-import SearchIconSVG from '../../images/search-icon-page.svg';
+import { View, KeyboardAvoidingView, Platform } from 'react-native';
 
 import { styles } from './styles';
 import MoviesAPI from '../../services/movies-api';

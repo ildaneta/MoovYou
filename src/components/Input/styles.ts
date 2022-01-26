@@ -3,6 +3,10 @@ import theme from '../../theme';
 import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
+  container: {
+    flex: theme.dimensions.Thin1
+  },
+
   containerInput: {
     flexDirection: AlignTypes.row,
   },
