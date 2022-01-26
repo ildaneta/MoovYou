@@ -1,7 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import theme from '../../theme';
-import { AlignTypes } from '../../utils/enum';
 import Text from '../Text';
 
 import { styles } from './styles';
