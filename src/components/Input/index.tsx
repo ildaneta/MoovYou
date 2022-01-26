@@ -25,7 +25,7 @@ const Input = ({
   ...rest
 }: IInputProps): JSX.Element => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <View style={styles.containerInput}>
         <TextInput
           {...rest}
