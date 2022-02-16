@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "393852339381",
+    "project_id": "moovyou-1696a",
+    "storage_bucket": "moovyou-1696a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393852339381:android:448c30baa84b4c59952afc",
+        "android_client_info": {
+          "package_name": "com.favoritesmovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393852339381-s2t6b9ufd1catnregi56giv8128lp2fg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.favoritesmovies",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "393852339381-bci1pev05e2mirpu1kngr27569g2gmju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_lUaW44GZlyF3RX5Jgx5Ib9t06BS9tjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393852339381-bci1pev05e2mirpu1kngr27569g2gmju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
