@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import Header from '../../components/Header';
 import MovieRate from '../../components/MovieRate';
@@ -16,6 +16,9 @@ import { styles } from './styles';
 import Loader from '../../components/Loader';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
+
+import LogoutSVG from '../../images/logout.svg';
+import { useAuthContext } from '../../context/AuthContext';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<IStackRoutes, 'Home'>;
 
@@ -43,6 +46,13 @@ const Home = ({ navigation }: Props): JSX.Element => {
   const [isLoading, setIsLoading] = useState(false);
   const [__, setIsFirstTime] = useState<string | null>();
   const [page, _] = useState(1);
+
+  const { signOut } = useAuthContext();
+
+  const Logout = async () => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    await signOut();
+  };
 
   const loadMoviesNowPlaying = async () => {
     try {
@@ -119,7 +129,21 @@ const Home = ({ navigation }: Props): JSX.Element => {
         <ScrollView
           style={styles.container}
           showsVerticalScrollIndicator={false}>
-          <Header />
+          <View style={styles.containerHeader}>
+            <Header />
+
+            <View style={styles.containerLogout}>
+              <TouchableOpacity activeOpacity={0.8} onPress={Logout}>
+                <LogoutSVG />
+              </TouchableOpacity>
+              <Text
+                label="Logout"
+                fontFamily={theme.fonts.Light}
+                fontSize={theme.fontsSize.XXS10}
+                color={theme.colors.neutral_gray}
+              />
+            </View>
+          </View>
 
           <Text
             label="Now Showing"
