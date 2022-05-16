@@ -2,7 +2,7 @@
   "expo": {
     "name": "MoovYou",
     "slug": "MoovYou",
-    "scheme": "MoovYou",
+    "scheme": "Moov-You",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
