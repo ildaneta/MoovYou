@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import theme from '../../theme';
+import { AlignTypes } from '../../utils/enum';
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,6 +8,16 @@ export const styles = StyleSheet.create({
     paddingHorizontal: theme.dimensions.Medium16,
     flex: theme.dimensions.Thin1,
     paddingBottom: theme.dimensions.Large30
+  },
+
+  containerHeader: {
+    justifyContent: AlignTypes.space_between,
+    flexDirection: AlignTypes.row,
+    alignItems: AlignTypes.center,
+  },
+
+  containerLogout: {
+    alignItems: AlignTypes.center
   },
 
   divider: {
