@@ -14,7 +14,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "393852339381-s2t6b9ufd1catnregi56giv8128lp2fg.apps.googleusercontent.com",
+          "client_id": "393852339381-qr5od5himi0n3lk7jsgi1fji4dqt89q9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.favoritesmovies",
@@ -37,6 +37,13 @@
             {
               "client_id": "393852339381-bci1pev05e2mirpu1kngr27569g2gmju.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "393852339381-0hbm7p30t6crpo5eg3o6hu2s86lhq5sf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.name.favoritesmovies"
+              }
             }
           ]
         }
