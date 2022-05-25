@@ -23,11 +23,12 @@ export const styles = StyleSheet.create({
     width: theme.dimensions.width133,
     height: theme.dimensions.height198,
     borderRadius: theme.dimensions.XXXS10,
+    backgroundColor: 'gray'
   },
 
   containerText: {
     width: theme.dimensions.width133,
-    marginVertical: theme.dimensions.XXS12
+    marginVertical: theme.dimensions.XXS12,
   },
 
   title: {
