@@ -1,6 +1,6 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
-import { ImageBackground, View } from 'react-native';
+import { ImageBackground, Platform, View } from 'react-native';
 import Text from '../../components/Text';
 import { MovieDetailsDTO } from '../../dtos/MovieDetailsDTO';
 import { IStackRoutes } from '../../routes/stack.routes';
@@ -46,6 +46,11 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
 
   const { movieId } = route.params;
 
+  const { index, routes } = navigation.getState();
+  const routeName = routes[index].name;
+
+  console.log('Route name: ', routeName);
+
   const LoadMovieDetails = async () => {
     try {
       setIsLoading(true);
@@ -82,20 +87,30 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
       ) : (
         <>
           <View style={styles.containerImage}>
-            <ImageBackground
-              source={{
-                uri: `https://image.tmdb.org/t/p/w500/${movieDetails.backdrop_path}`,
-              }}
-              resizeMode="cover"
-              style={styles.image}
-              resizeMethod="scale"
-            />
+            {movieDetails.backdrop_path === null ? (
+              <>
+                <View style={styles.imageWithoutBackground} />
+              </>
+            ) : (
+              <>
+                <ImageBackground
+                  source={{
+                    uri: `https://image.tmdb.org/t/p/w500/${movieDetails.backdrop_path}`,
+                  }}
+                  resizeMode="cover"
+                  style={styles.image}
+                  resizeMethod="scale"
+                />
 
-            <BorderlessButton
-              onPress={() => navigation.goBack()}
-              style={styles.arrowBack}>
-              <ArrowBackSVG />
-            </BorderlessButton>
+                {Platform.OS === 'android' ? null : (
+                  <BorderlessButton
+                    onPress={() => navigation.goBack()}
+                    style={styles.arrowBack}>
+                    <ArrowBackSVG />
+                  </BorderlessButton>
+                )}
+              </>
+            )}
           </View>
 
           <View style={styles.containerMovieDetails}>
@@ -109,7 +124,7 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
               />
 
               <View style={styles.like}>
-                <Like isLiked={false} />
+                <Like isLiked={false} onPress={() => {}} />
               </View>
             </View>
 
@@ -130,26 +145,34 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
               style={styles.synopsis}
             />
 
-            <Text
-              label="CAST"
-              fontFamily={theme.fonts.Bold}
-              fontSize={theme.fontsSize.Medium14}
-              color={theme.colors.neutral_white}
-              style={{ paddingBottom: 20 }}
-            />
-
-            <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={firstActors}
-              renderItem={({ item }) => (
-                <Cast
-                  image={`https://image.tmdb.org/t/p/w500/${item.profile_path}`}
-                  castName={item.original_name}
+            {firstActors?.length === 0 ? (
+              <></>
+            ) : (
+              <>
+                <Text
+                  label="CAST"
+                  fontFamily={theme.fonts.Bold}
+                  fontSize={theme.fontsSize.Medium14}
+                  color={theme.colors.neutral_white}
+                  style={styles.castTitle}
                 />
-              )}
-              ItemSeparatorComponent={() => <View style={styles.actorsList} />}
-            />
+
+                <FlatList
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  data={firstActors}
+                  renderItem={({ item: movie }) => (
+                    <Cast
+                      image={`https://image.tmdb.org/t/p/w500/${movie.profile_path}`}
+                      castName={movie.original_name}
+                    />
+                  )}
+                  ItemSeparatorComponent={() => (
+                    <View style={styles.actorsList} />
+                  )}
+                />
+              </>
+            )}
           </View>
         </>
       )}
