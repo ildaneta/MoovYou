@@ -10,7 +10,8 @@ export const styles = StyleSheet.create({
   image: {
     borderRadius: theme.dimensions.XXXS10,
     width: theme.dimensions.Big78,
-    height: theme.dimensions.Big78
+    height: theme.dimensions.Big78,
+    backgroundColor: 'gray'
   },
 
   castName: {

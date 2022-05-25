@@ -35,6 +35,11 @@ const Search = ({ navigation }: Props): JSX.Element => {
   const [isError, setIsError] = useState(false);
   const [errorText, setErrorText] = useState('');
 
+  const { index, routes } = navigation.getState();
+  const routeName = routes[index].name;
+
+  console.log('Route name: ', routeName);
+
   const handleSearchMovie = (text: string) => {
     if (!text) {
       setIsError(true);
@@ -84,6 +89,7 @@ const Search = ({ navigation }: Props): JSX.Element => {
       setIsError(false);
     }, []),
   );
+
   return (
     <KeyboardAvoidingView
       style={{ flex: theme.dimensions.Thin1 }}
@@ -102,6 +108,8 @@ const Search = ({ navigation }: Props): JSX.Element => {
             isError={isError}
             labelError={errorText}
             onPress={() => getMovieSearched()}
+            autoFocus={true}
+            autoCorrect={false}
           />
         </View>
 

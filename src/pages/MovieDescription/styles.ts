@@ -22,10 +22,20 @@ export const styles = StyleSheet.create({
     position: AlignTypes.relative
   },
 
+  imageWithoutBackground: {
+    backgroundColor: 'gray',
+    width: theme.dimensions.widthFull,
+    height: theme.dimensions.height220,
+  },
+
   arrowBack: {
    position: AlignTypes.absolute,
    top: theme.dimensions.Medium16,
    left: theme.dimensions.Medium16
+  },
+
+  castTitle: {
+     paddingBottom: theme.dimensions.Large20 
   },
 
   movieTitle: {

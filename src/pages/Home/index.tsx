@@ -54,6 +54,9 @@ const Home = ({ navigation }: Props): JSX.Element => {
     await signOut();
   };
 
+  const { index, routes } = navigation.getState();
+  const routeName = routes[index].name;
+
   const loadMoviesNowPlaying = async () => {
     try {
       setIsLoading(true);
@@ -123,82 +126,76 @@ const Home = ({ navigation }: Props): JSX.Element => {
 
   return (
     <>
-      {isLoading ? (
-        <Loader size="small" />
-      ) : (
-        <ScrollView
-          style={styles.container}
-          showsVerticalScrollIndicator={false}>
-          <View style={styles.containerHeader}>
-            <Header />
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        <View style={styles.containerHeader}>
+          <Header />
 
-            <View style={styles.containerLogout}>
-              <TouchableOpacity activeOpacity={0.8} onPress={Logout}>
-                <LogoutSVG />
-              </TouchableOpacity>
-              <Text
-                label="Logout"
-                fontFamily={theme.fonts.Light}
-                fontSize={theme.fontsSize.XXS10}
-                color={theme.colors.neutral_gray}
-              />
-            </View>
-          </View>
-
-          <Text
-            label="Now Showing"
-            fontFamily={theme.fonts.Medium}
-            fontSize={theme.fontsSize.Large20}
-            color={theme.colors.neutral_middle_white}
-            style={styles.divider}
-          />
-
-          <View style={styles.containerFlatlistHorizontal}>
-            <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={moviesListNowPlaying.results}
-              keyExtractor={item => String(item.id)}
-              showsVerticalScrollIndicator={false}
-              renderItem={({ item }) => (
-                <MovieRate
-                  data={item}
-                  isLiked={false}
-                  onPress={() => selectedMovieNowPlaying(item.id)}
-                />
-              )}
-              ItemSeparatorComponent={() => (
-                <View style={styles.separatorHorizontal} />
-              )}
+          <View style={styles.containerLogout}>
+            <TouchableOpacity activeOpacity={0.8} onPress={Logout}>
+              <LogoutSVG />
+            </TouchableOpacity>
+            <Text
+              label="Logout"
+              fontFamily={theme.fonts.Light}
+              fontSize={theme.fontsSize.XXS10}
+              color={theme.colors.neutral_gray}
             />
           </View>
+        </View>
 
-          <Text
-            label="Top Rated"
-            fontFamily={theme.fonts.Medium}
-            fontSize={theme.fontsSize.Large20}
-            color={theme.colors.neutral_middle_white}
-            style={styles.title}
-          />
+        <Text
+          label="Now Showing"
+          fontFamily={theme.fonts.Medium}
+          fontSize={theme.fontsSize.Large20}
+          color={theme.colors.neutral_middle_white}
+          style={styles.divider}
+        />
 
+        <View style={styles.containerFlatlistHorizontal}>
           <FlatList
-            data={moviesTopRated.results}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            data={moviesListNowPlaying.results}
             keyExtractor={item => String(item.id)}
             showsVerticalScrollIndicator={false}
             renderItem={({ item }) => (
-              <MovieTag
+              <MovieRate
                 data={item}
                 isLiked={false}
-                onPress={() => selectedMovieTopRated(item.id)}
+                onPress={() => selectedMovieNowPlaying(item.id)}
               />
             )}
-            ItemSeparatorComponent={() => <View style={styles.divider} />}
-            ListFooterComponent={() => (
-              <View style={styles.footerSpaceFlatlist} />
+            ItemSeparatorComponent={() => (
+              <View style={styles.separatorHorizontal} />
             )}
           />
-        </ScrollView>
-      )}
+        </View>
+
+        <Text
+          label="Top Rated"
+          fontFamily={theme.fonts.Medium}
+          fontSize={theme.fontsSize.Large20}
+          color={theme.colors.neutral_middle_white}
+          style={styles.title}
+        />
+
+        <FlatList
+          data={moviesTopRated.results}
+          keyExtractor={item => String(item.id)}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <MovieTag
+              data={item}
+              isLiked={false}
+              onPress={() => selectedMovieTopRated(item.id)}
+            />
+          )}
+          ItemSeparatorComponent={() => <View style={styles.divider} />}
+          ListFooterComponent={() => (
+            <View style={styles.footerSpaceFlatlist} />
+          )}
+        />
+      </ScrollView>
     </>
   );
 };
