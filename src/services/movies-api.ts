@@ -1,6 +1,6 @@
 import api from './api';
 
-const {API_KEY} = process.env;
+const API_KEY = "d3fa3eff0688ce3997fe1ce003a4cca1"
 
 const MoviesAPI = {
   getMoviesListNowPlaying: async (page_number: number) => {

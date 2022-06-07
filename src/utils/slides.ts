@@ -6,7 +6,7 @@ export const slides = [
   },
   {
     key: '2',
-    description: 'Favorite your m ovies and look all the details about it',
+    description: 'Favorite your movies and look all the details about it',
     image: require('../images/image-slider-02.png'),
   },
   {

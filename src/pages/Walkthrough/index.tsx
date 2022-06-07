@@ -74,7 +74,7 @@ const Walkthrough = ({ navigation }: Props): JSX.Element => {
         data={slides}
         scrollX={scrollX}
         onPress={currentIndex !== 2 ? scrollTo : handleStart}
-        label={currentIndex !== 2 ? 'Next' : 'Get Started'}
+        label={currentIndex !== 2 ? 'Next' : 'Get Started >'}
       />
     </View>
   );

@@ -9,11 +9,7 @@ import Login from '../pages/Login';
 const Routes = (): JSX.Element => {
   const { user } = useAuthContext();
 
-  return (
-    <NavigationContainer>
-      {user.id ? <StackRoutes /> : <Login />}
-    </NavigationContainer>
-  );
+  return <NavigationContainer>{<StackRoutes />}</NavigationContainer>;
 };
 
 export default Routes;
