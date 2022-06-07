@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "393852339381",
-    "project_id": "moovyou-1696a",
-    "storage_bucket": "moovyou-1696a.appspot.com"
+    "project_number": "971087727661",
+    "project_id": "moovyou-352417",
+    "storage_bucket": "moovyou-352417.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:393852339381:android:448c30baa84b4c59952afc",
+        "mobilesdk_app_id": "1:971087727661:android:dae7cfcfdc4b84f2283ca4",
         "android_client_info": {
           "package_name": "com.favoritesmovies"
         }
       },
       "oauth_client": [
         {
-          "client_id": "393852339381-qr5od5himi0n3lk7jsgi1fji4dqt89q9.apps.googleusercontent.com",
+          "client_id": "971087727661-kjc6rb09is7766vco82nicf6rg9ke0j4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.favoritesmovies",
@@ -22,28 +22,21 @@
           }
         },
         {
-          "client_id": "393852339381-bci1pev05e2mirpu1kngr27569g2gmju.apps.googleusercontent.com",
+          "client_id": "971087727661-iav3ef2kadvtq35ddha0m9hpurhrmhhp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA_lUaW44GZlyF3RX5Jgx5Ib9t06BS9tjM"
+          "current_key": "AIzaSyCOL7dzYfJXFEof-1QHKw-RhPsFlNuo4rs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "393852339381-bci1pev05e2mirpu1kngr27569g2gmju.apps.googleusercontent.com",
+              "client_id": "971087727661-iav3ef2kadvtq35ddha0m9hpurhrmhhp.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "393852339381-0hbm7p30t6crpo5eg3o6hu2s86lhq5sf.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "org.name.favoritesmovies"
-              }
             }
           ]
         }
