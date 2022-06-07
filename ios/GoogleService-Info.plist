@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>971087727661-05t3409h5cohogcmbf1li3nt9ajk9lmi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.971087727661-05t3409h5cohogcmbf1li3nt9ajk9lmi</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>971087727661-kjc6rb09is7766vco82nicf6rg9ke0j4.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC6aS3jop2c2pM1sBWLM-2qpQXROGCh2mE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>971087727661</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.name.favoritesmovies</string>
+	<key>PROJECT_ID</key>
+	<string>moovyou-352417</string>
+	<key>STORAGE_BUCKET</key>
+	<string>moovyou-352417.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:971087727661:ios:2c7f17a900b887af283ca4</string>
+</dict>
+</plist>
