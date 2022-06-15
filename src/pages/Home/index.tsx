@@ -55,7 +55,6 @@ const Home = ({ navigation }: Props): JSX.Element => {
   };
 
   const { index, routes } = navigation.getState();
-  const routeName = routes[index].name;
 
   const loadMoviesNowPlaying = async () => {
     try {
@@ -64,6 +63,7 @@ const Home = ({ navigation }: Props): JSX.Element => {
       setMoviesListNowPlaying(response.data);
       setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
       // TODO create an error file
       throw new Error('Ops! We had an error to get the movies list!');
@@ -130,7 +130,8 @@ const Home = ({ navigation }: Props): JSX.Element => {
         <View style={styles.containerHeader}>
           <Header />
 
-          <View style={styles.containerLogout}>
+          {/* TODO logout retirado */}
+          {/* <View style={styles.containerLogout}>
             <TouchableOpacity activeOpacity={0.8} onPress={Logout}>
               <LogoutSVG />
             </TouchableOpacity>
@@ -140,7 +141,7 @@ const Home = ({ navigation }: Props): JSX.Element => {
               fontSize={theme.fontsSize.XXS10}
               color={theme.colors.neutral_gray}
             />
-          </View>
+          </View> */}
         </View>
 
         <Text
