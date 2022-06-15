@@ -11,6 +11,7 @@ export type IStackRoutes = {
   Movie_Description: {
     movieId: number;
   };
+  Watch_List: undefined;
   Tab_Routes: undefined;
   Walkthrough: undefined;
   Search: undefined;
