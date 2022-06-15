@@ -20,12 +20,14 @@ interface IMovieTagProps extends TouchableOpacityProps {
   data: MoviesDTO;
   isLiked: boolean;
   children?: ReactElement<any, any>;
+  hasShownLike?: boolean;
 }
 
 const MovieTag = ({
   data,
   isLiked,
   children,
+  hasShownLike,
   ...rest
 }: IMovieTagProps): JSX.Element => {
   return (
@@ -37,9 +39,12 @@ const MovieTag = ({
         style={styles.image}
         resizeMode="cover"
       />
-      <View style={styles.containerLike}>
-        <Like isLiked={isLiked} />
-      </View>
+
+      {hasShownLike && (
+        <View style={styles.containerLike}>
+          <Like isLiked={isLiked} />
+        </View>
+      )}
 
       <View style={styles.containerTitleTagRate}>
         <Text
