@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import {
   View,
   Image,
@@ -19,9 +19,15 @@ import { styles } from './styles';
 interface IMovieTagProps extends TouchableOpacityProps {
   data: MoviesDTO;
   isLiked: boolean;
+  children?: ReactElement<any, any>;
 }
 
-const MovieTag = ({ data, isLiked, ...rest }: IMovieTagProps): JSX.Element => {
+const MovieTag = ({
+  data,
+  isLiked,
+  children,
+  ...rest
+}: IMovieTagProps): JSX.Element => {
   return (
     <TouchableOpacity style={styles.container} {...rest} activeOpacity={0.9}>
       <Image
@@ -48,15 +54,19 @@ const MovieTag = ({ data, isLiked, ...rest }: IMovieTagProps): JSX.Element => {
 
         <Rates vote={data.vote_average} />
 
-        <View style={styles.containerTags}>
-          {data.genre_ids.map(genreId => (
-            <Tag
-              title={getNameGenres(genreId)}
-              tagType="PillTag"
-              key={genreId}
-            />
-          ))}
-        </View>
+        {children && children}
+
+        {data.genre_ids && (
+          <View style={styles.containerTags}>
+            {data.genre_ids.map(genreId => (
+              <Tag
+                title={getNameGenres(genreId)}
+                tagType="PillTag"
+                key={genreId}
+              />
+            ))}
+          </View>
+        )}
       </View>
     </TouchableOpacity>
   );
