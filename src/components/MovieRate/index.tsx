@@ -20,12 +20,14 @@ interface IMovieRateProps extends TouchableOpacityProps {
   isLiked: boolean;
   data: MoviesDTO;
   isSearch?: boolean;
+  hasShownLike?: boolean;
 }
 
 const MovieRate = ({
   isLiked,
   data,
   isSearch,
+  hasShownLike,
   ...rest
 }: IMovieRateProps): JSX.Element => {
   const stylesProps = StyleSheet.create({
@@ -35,6 +37,7 @@ const MovieRate = ({
       alignItems: AlignTypes.center,
     },
   });
+
   return (
     <TouchableOpacity
       {...rest}
@@ -48,9 +51,12 @@ const MovieRate = ({
           resizeMode="cover"
           style={styles.image}
         />
-        <View style={styles.containerLike}>
-          <Like isLiked={isLiked} />
-        </View>
+
+        {hasShownLike && (
+          <View style={styles.containerLike}>
+            <Like isLiked={isLiked} />
+          </View>
+        )}
       </View>
 
       <View style={styles.containerText}>
