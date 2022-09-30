@@ -123,8 +123,6 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
       }
 
       if (!likedMovie) {
-        // setLikedMovie(prev => !prev);
-        console.log('filme favoritado');
         setIsLoading(true);
 
         const data = await AsyncStorage.getItem(favoriteMovieKey);
@@ -146,7 +144,7 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
     }
   };
 
-  const loadData = async () => {
+  const LoadDataStoraged = async () => {
     try {
       setIsLoading(true);
       const favoriteMovieKey = '@MoovYou:favorites-movies';
@@ -166,7 +164,7 @@ const MovieDescription = ({ route, navigation }: Props): JSX.Element => {
     useCallback(() => {
       LoadMovieDetails();
       GetMoviesCast();
-      loadData();
+      LoadDataStoraged();
     }, []),
   );
 
