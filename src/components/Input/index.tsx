@@ -44,7 +44,7 @@ const Input = ({
         <View style={styles.textError}>
           <Text
             fontFamily={theme.fonts.Regular}
-            fontSize={theme.fontsSize.XS12}
+            fontSize={theme.fontsSize.Medium14}
             color={theme.colors.neutral_red}
             label={labelError}
           />
