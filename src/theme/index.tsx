@@ -69,6 +69,6 @@ export default {
     neutral_gray: '#d1d1d1',
     neutral_middle_white: '#cecece',
     neutral_white: '#f9f9f9',
-    neutral_red: '#cc0000',
+    neutral_red: '#ff0000',
   },
 };
