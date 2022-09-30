@@ -35,7 +35,7 @@ const Walkthrough = ({ navigation }: Props): JSX.Element => {
   };
 
   const handleStart = async () => {
-    await AsyncStorage.setItem('@moovyou:isFirstTime', 'no');
+    await AsyncStorage.setItem('@moovyou:isFirstTime', 'yes');
 
     navigation.navigate(RoutesName.HOME);
   };
