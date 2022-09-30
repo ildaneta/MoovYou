@@ -40,7 +40,7 @@ const MovieDetails = ({ data, ...rest }: IMovieDetailsProps): JSX.Element => {
     }
   };
 
-  const firstGenres = data.genres && data.genres.slice(0, 4);
+  const firstGenres = data.genres && data.genres.slice(0, 3);
 
   return (
     <View style={styles.movieDetails} {...rest}>
