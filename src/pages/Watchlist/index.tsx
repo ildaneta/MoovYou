@@ -72,7 +72,7 @@ const Watchlist = ({ navigation }: Props): JSX.Element => {
     <>
       {isLoading && <Loader size="large" />}
 
-      {favorites ? (
+      {favorites?.length > 0 ? (
         <ScrollView style={styles.scrollviewContainer}>
           <Text
             label="Favorites"
