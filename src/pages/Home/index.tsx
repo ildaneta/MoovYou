@@ -108,7 +108,7 @@ const Home = ({ navigation }: Props): JSX.Element => {
     const firstTime = storage;
 
     setIsFirstTime(firstTime);
-    if (firstTime !== 'no') return navigation.navigate(RoutesName.WALKTHROUGH);
+    if (firstTime !== 'yes') return navigation.navigate(RoutesName.WALKTHROUGH);
   };
 
   useEffect(() => {
